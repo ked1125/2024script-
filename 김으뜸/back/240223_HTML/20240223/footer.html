@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ki">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        a:link,a:visited{text-decoration: none;color: black;}
+        ul,li{list-style: none;}
+        
+        
+        .addr{font-style: italic;}
+        /*
+        스타일의 우선순위
+        * < tag< class < id < inline style(body탭에서 작성해주는 style값, javascript가 이부분에서 작업된다.) < !important
+        */
+
+
+        /*footer*/
+        .fWrap{
+            background-color: #171717;
+            min-width: 1280px;
+            padding: 64px 0;
+        }
+        .fWrap>.footer{
+            width: 1280px;
+            margin: 0 auto;
+        }
+        .fWrap>.footer>.innerWrap{display: flex;justify-content: space-between;}
+        .fWrap>.footer>.innerWrap>.policy{}
+        .fWrap>.footer>.innerWrap>.policy>ul{display: flex;gap: 10px;}
+        .fWrap>.footer>.innerWrap>.policy>ul>li{color: #E1E1E1B2;}
+        .fWrap>.footer>.innerWrap>.policy>ul>li>a{color: #E1E1E1B2;font-size: 12px;}
+    
+        .fWrap>.footer>.innerWrap>.sns{}
+        .fWrap>.footer>.innerWrap>.sns>ul{display: flex;gap: 20px;}
+        .fWrap>.footer>.innerWrap>.sns>ul>li{}
+        .fWrap>.footer>.innerWrap>.sns>ul>li>a{}
+        .fWrap>.footer>.innerWrap>.sns>ul>li>a>img{}
+    
+
+    </style>
+
+</head>
+<body>
+    <!-- <header>
+        <nav></nav>
+    </header>
+    <section></section>
+    <footer>
+        <address style="font-style: normal;" class="addr">서울시 영등포구</address>
+    </footer> -->
+
+
+    <div class="fWrap"><!--w100%-->
+        <div class="footer"><!-- w1280 m0auto -->
+            <div class="innerWrap">
+                <div class="policy">
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li>|</li>
+                        <li><a href="#">이용동의서</a></li>
+                        <li>|</li>
+                        <li><a href="#">이메일문의</a></li>
+                        <li>|</li>
+                        <li><a href="#">주무관청</a></li>
+                        <li>|</li>
+                        <li><a href="#">국세청</a></li>
+                    </ul>
+                </div>
+                <div class="sns">
+                    <ul>
+                        <li><a href="#"><img src="./image//facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="./image//youtube.png" alt=""></a></li>
+                        <li><a href="#"><img src="./image//instar.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+    </div>
+</body>
+
+<!-- 쉬+del 행삭제 -->
+</html>

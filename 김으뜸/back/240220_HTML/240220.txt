@@ -1,0 +1,25 @@
+*position - 메뉴 상단 고정
+
+*border <- box이론 (div 태그 적용 - 크기값 부여 및 배치)
+
+
+
+
+div - 감싸고 있는 div 박스
+   div
+   div
+   div
+div - 감ㅆ고있는 div박스
+
+=> 세로로 배열된 것을 가로로 배치하기 위해 display flex를 사용해서 재배열 하여 사용
+감싸고 있는 박스 (부모 div개체)에 d.f 이용
+
+
+
+
+
+.box:after{content:"내용입력"}
+=>.box의 div, child 요소의 마지막
+
+.box:before{content:"내용입력"}
+=> box의 div, child요소의 첫번째

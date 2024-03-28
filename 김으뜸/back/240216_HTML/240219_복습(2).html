@@ -1,0 +1,65 @@
+<!-- 1) !누르고 tab키로 기본세팅 -->
+<!DOCTYPE html>
+<html lang="ko">
+    <!-- 2) lang값 ko로 수정 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   /* 4) head에서 전체적인 style코드(CSS코드) 작성  -> style입력 후 tab */
+        body>div.imgWrap{
+            background-color: skyblue;
+            /* bgc 입력 후 엔터 */
+            width: 200px;
+            /* w200 입력후 tab */
+            /* overflow: hidden;  : 넘치는부분 숨김 */
+
+            margin: 0 auto;
+            /* margin: 0 auto; : 화면 중앙에 알아서 배치됨. 화면넓이 줄이고 넓혀도! */
+            /* margin-left: auto; : 화면의 가장 오른쪽에 붙음 auto는 최대값을 부여하게됨. */
+           /* margin-right: auto; : 화면의 가장 왼쪽에 붙음 (auto=최대값부여됨) 
+           따라서 left+right에 auto값 부여시 중앙정렬이된다고 보면됩니다.*/
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <!-- 3) body탭 먼저 작성 후 -->
+
+    test1
+
+    <div class = "imgWrap">
+        <!-- a) div 입력 후 tab눌러서 div태그 먼저 생성 후 -->
+        <!-- b) div태그에 imgWrap이라는 클래스명을 부여해줌 -->
+
+        <a href="https://www.naver.com" >test2</a>
+        <!-- c) imgWrap이라는 div태그 내 a입력후 tab키로 a태그 생성 -->
+        <!-- <a href="https://www.naver.com" target="_blank">test2</a>  :: 새창에서 열림-->
+        <!-- <a href="https://www.naver.com" target="_self">test2</a>  :: 해당페이지변경, 사진자체 클릭으로????ㅡㅡ??-->
+        <!-- a태그 :: 인라인태그! 현재 페이지에서 변경이됨 -->
+        
+    
+        <img src="view.jpg" alt="구름" class="pic1">
+        <!-- img태그는 원래 인라인태그임. -->
+        <!-- ->해당 img태그는 div의 부모인 body크기만큼 한 줄을 전부 차지하여 블록단위처럼 처리된다 -->
+
+    </div>
+
+    <img src="view.jpg" alt="구름">
+    <img src="view1.jpg" alt="연예인">
+    <!-- <img src="view1.jpg" alt="구름">과같이 파일명 일치하지 않는 오류발생시 구름이라는 글자가 뜬다 -->
+    <div>11</div>
+    
+</body>
+</html>
+
+<!-- style에서 주석은 /* 주석내용 */ -->
+<!-- 나머지에서 주석처리는 해당기호로 표기, 단축키 컨+/ -->
+<!-- 행 이동시 알+방향키 -->
+<!-- 쉬+알+↓ 한줄복사 -->
+<!-- 알+L+O 브라우저창에서 라이브로 확인 -->
+<!-- 알+여러숫자,문자 각각 클릭 - 여러부분 동시에 중복 삭제 및 수정가능 -->

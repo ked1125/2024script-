@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $.ajax({
+        url: "https://dapi.kakao.com/v2/search/web?query=테슬라&sort=recency&size=30",
+        type: "GET",
+        dataType: "json",
+        data: {
+          query: "테슬라",
+          sort: "recency",
+          size: 30,
+        },
+        beforeSend: onBefore,
+        success: onSuccess,
+        error: onError,
+      });
+
+      function onBefore(xhr) {
+        xhr.setRequestHeader(
+          "Authorization",
+          "KakaoAK 6e06c47b69afc400ef46abaab6dae622"
+        );
+      }
+
+      function onSuccess(v) {
+        console.log(v);
+      }
+      function onError(xhr, status, error) {
+        console.log(xhr, status, error);
+      }
+
+      axios
+        .get("")
+        .then(function (v) {
+          console.log(v);
+        })
+        .catch(function () {});
+    </script>
+  </body>
+</html>

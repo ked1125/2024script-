@@ -1,0 +1,5 @@
+*****CRUD값에 따라 *****
+1. (design) input 만들기, todo button 만들기
+2. (create) input value 입력 후 버튼 클릭 -> 자료 push()
+3. (read) 입력값 list출력
+4. (delete) 입력된 값 list삭제 -> splice()

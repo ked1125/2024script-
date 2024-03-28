@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #333;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .layer {
+        display: flex;
+        gap: 10px;
+      }
+      .layer > li {
+        width: 300px;
+      }
+      .layer img {
+        width: 100%;
+      }
+      /* layer */
+      .glayLayer {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        /* opacity: 0.3; */
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .overLayer {
+        display: flex;
+        flex-direction: column;
+      }
+      .closeWrap {
+        display: flex;
+        justify-content: end;
+        font-size: 1.5em;
+      }
+      .closeWrap a {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="layer">
+      <li>
+        <a href="./images/img1.jpg" class="modal"
+          ><img src="./images/img1.jpg" alt=""
+        /></a>
+        <!-- a안에는 큰이미지, img태그에는 작은이미지가 보통 들어감???맞나? -->
+        <!-- href:: 어트리뷰트, a태그가 가지고있는 특징? "value 값" -->
+      </li>
+      <li>
+        <a href="./images/img2.jpg" class="modal"
+          ><img src="./images/img2.jpg" alt=""
+        /></a>
+      </li>
+      <li>
+        <a href="./images/img3.jpg" class="modal"
+          ><img src="./images/img3.jpg" alt=""
+        /></a>
+      </li>
+    </ul>
+
+    <div class="glayLayer">
+      <div class="overLayer">
+        <div class="closeWrap">
+          <a href="#" onclick="aClick">
+            <!-- <a href="javascript:void(0)"> -->
+            <!-- void(0) -> 리턴값이 없을 때?? -->
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+        </div>
+        <img src="./images/img1.jpg" alt="" />
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(".modal").click(function (e) {
+        e.preventDefault();
+        // 페이지 이동의 기능을하는  a태그의 기능을 막는 것?-,-? = > a태그는 클릭하고 href값에 #을 입력시 맨 위로 화면을 이동시킨다. 이러한 기능을 방지하기 위함!
+        // alert("test");
+
+        let aModal = $(this).attr("href"); // 클릭시 이미지 경로 가지고 오기. //get
+        // $(this)=.modal을 의미,
+        // attr : 어트리뷰트 의미
+        console.log(aModal);
+        $(".overLayer img").attr("src", aModal); //set
+        $(".glayLayer").css({ display: "flex" });
+      });
+
+      $(".closeWrap a").click(function () {
+        e.preventDefault();
+        $(".glayLayer").css({ display: "none" });
+      });
+      // 닫는거
+      $(".glayLayer").click(function () {
+        $(this).hide();
+        // $(this).css({ display: "none" });
+      });
+
+      let txt = "";
+      let fruit = ["apple", "graph", "orange"];
+      fruit.forEach(function (it, i) {
+        // console.log(item);
+        console.log(fruit[it]);
+        txt += it;
+      });
+      console.log(txt);
+    </script>
+  </body>
+</html>

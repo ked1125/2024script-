@@ -1,0 +1,160 @@
+@charset 'utf-8';
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #222;
+}
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  height: 200%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+  min-height: 760px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.swiper .bgImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.swiper .bgImage.bgImg01 {
+  background-image: url(../img/new_main_visual_bg01.jpg);
+}
+.swiper .bgImage.bgImg02 {
+  background-image: url(../img/new_main_visual_bg02.jpg);
+}
+.swiper .bgImage.bgImg03 {
+  background-image: url(../img/new_main_visual_bg03.jpg);
+}
+.swiper .bgImage.bgImg04 {
+  background-image: url(../img/new_main_visual_bg04.jpg);
+}
+
+.txtWrap {
+  width: 1240px;
+  display: flex;
+  align-items: center;
+}
+
+/* header */
+.hd {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+.hd .gnbWrap ul {
+  display: flex;
+  height: 100%;
+}
+.gnbWrap li {
+  /* background: skyblue; */
+}
+
+.gnbWrap li a {
+  /* display: block; */
+  height: 100%;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.utilWrap ul {
+  display: flex;
+  height: 100%;
+}
+.utilWrap li {
+  /* background-color: skyblue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 5px; */
+  color: white;
+}
+.utilWrap a {
+  /* background-color: pink; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.banner .cardWrap {
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardWrap img {
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  transform: scale(1);
+}
+
+.cardWrap:hover img {
+  transform: scale(1.1);
+}
+
+.cardWrap .txtWrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(1, 41, 93, 0.56);
+  padding: 20px 0;
+}
+
+/* .section .cardWrap{} */
+
+/* common */
+.colorGray {
+  background-color: #eee !important;
+}
+
+.boxShadow {
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+  border-radius: 20px;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 16px;
+  top: 17px;
+}

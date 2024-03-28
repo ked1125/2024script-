@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .container{
+            width: 1320px;
+            /* background-color: #0DCAF0; */
+            border: 2px solid black;
+            /* border 두께 / 실선 / 색상 */
+            margin: 0 auto;
+        }
+
+        .bg-primary{
+            background-color: #0DCAF0;
+        }
+
+        @media (max-width:992px){
+            .container{width:100%;}
+            .bg-primary{
+                background-color: limegreen;
+            }
+        }
+        @media (max-width:576px){
+            .container{width:90%;}
+            .bg-primary{
+                background-color: pink;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container bg-primary">
+        test
+    </div>
+
+</body>
+</html>

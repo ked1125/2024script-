@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="list"></ul>
+    </div>
+    <!-- 01 -->
+    <!-- <script src="./data.js"></script>
+    <script>
+      console.log(data);
+    </script> -->
+    <!-- 01과정은 data.js에서 export default data; 과정을 반드시 삭제해야 함. -->
+    <!-- 02 -->
+    <script type="module">
+      // script의 type을 반드시 module로 설정 해줘야 만!!! data.js의 데이터를 땡겨올 수 있다.
+      import data from "./data.js";
+      console.log(data);
+
+      let listData = "";
+      for (let i = 0; i < 2; i++) {
+        listData += `<li>
+          <div class="card">
+            <img src="test/img" alt="" />
+            <div class="cardTitle">
+              <h3>
+                <a href="${data[i].href}"
+                  >${data[i].title}
+                >
+              </h3>
+              <div class="content">
+                ${data[i].content}
+              </div>
+            </div>
+            <div class="date">${data[i].cata}-${data[i].date}</div>
+          </div>
+        </li>`;
+      }
+      document.querySelector(".list").innerHTML = listData;
+    </script>
+  </body>
+</html>

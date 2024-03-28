@@ -1,0 +1,168 @@
+@charset "utf-8";
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+.mainView > img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* style */
+.header {
+  background-color: pink;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 20px;
+}
+.hWrap {
+  margin: 0 auto;
+  background-color: red;
+  padding: 20px;
+  width: 1280px;
+  height: 83px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuWrap {
+  display: flex;
+  align-items: center;
+  background-color: mintcream;
+  width: 530px;
+  height: 80px;
+}
+
+.logoColor {
+  width: 165px;
+  height: 35px;
+}
+
+.menuWrap > .menu {
+  background-color: skyblue;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menuWrap > .menu > li {
+  background-color: white;
+}
+
+.mainView {
+  margin-bottom: 160px;
+}
+
+.bannerWrap > .bannerTextWrap {
+  background-color: #aaa;
+  width: 1280px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+.bannerWrap > .bannerTextWrap > h2 {
+  font-size: 45px;
+}
+.bannerWrap > .bannerTextWrap > p {
+  background-color: #bbb;
+  width: 50%;
+  margin-left: auto;
+  margin-bottom: 100px;
+}
+
+.cardWrap {
+  background-color: skyblue;
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.cardWrap > .cardSlide {
+  background-color: red;
+}
+.cardWrap > .cardSlide > img {
+  width: 100%;
+}
+
+.cardTextWrap {
+  background-color: yellow;
+  width: 384px;
+  padding: 10px 16px;
+}
+
+.cardTextWrap > .titleIcon {
+  background-color: orangered;
+  display: flex;
+  margin-bottom: 7px;
+}
+
+.contentsWrap {
+  margin-bottom: 160px;
+}
+.contentsText {
+  background-color: pink;
+}
+
+.contentsBox {
+  width: 1114px;
+  height: 338px;
+  background-color: #ffd44a;
+  padding: 102px 520px 102px 104px;
+}
+
+.innerTxtWrap > h2 {
+  margin-bottom: 24px;
+}
+
+/* 재단소식 시작? */
+.contentsWrapBox > h2 {
+  font-size: 44px;
+}
+
+.btnMenu {
+  display: flex;
+  justify-content: right;
+}
+
+.slideWrap {
+  background-color: #eee;
+  width: 100%;
+  height: 970px;
+}
+
+.slideWrap > .scWrap {
+  width: 1280px;
+  height: 100%;
+  background-color: gray;
+  margin: 0 auto;
+  padding: 160px 32px;
+}
+.slideWrap > .scWrap > .contentsWrapBox {
+  background-color: lemonchiffon;
+  width: 100%;
+  height: 100%;
+}
+
+.footerWrap {
+  background-color: #171717;
+  width: 100%;
+  height: 300px;
+}

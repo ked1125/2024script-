@@ -1,0 +1,27 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;box-sizing: border-box;} 
+a:link, a:visited{text-decoration: none; color: #333;}
+
+
+.headWrap{
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    height: 82.74px;
+    background-color: pink;
+    margin: 0 auto;
+}
+.headWrap>.textWrap{
+    background-color: red;
+    display: flex;
+    width: 530px;
+    height: 76px;
+}
+.headWrap>.textWrap>h3{
+    font-size: 20px;
+}
+.headWrap>img{
+    width: 165px;
+    height: 35px;
+}
+

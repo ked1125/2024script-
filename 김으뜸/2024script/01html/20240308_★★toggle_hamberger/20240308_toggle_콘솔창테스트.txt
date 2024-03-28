@@ -1,0 +1,44 @@
+****콘솔창으로 실행물 확인해보기****
+document.getElementsByClassName("toggle_button")[0].classList
+
+
+
+document.getElementsByClassName("toggle_button")[0].classList.add("actiive")
+
+
+
+document.getElementsByClassName("toggle_button")[0].classList
+
+
+
+document.getElementsByClassName("toggle_button")[0].classList.remove("active")
+
+
+
+document.getElementsByClassName("toggle_button")[0].classList
+
+==============================================
+
+
+document.getElementsByClassName("toggle_button")[0].classList
+
+
+
+document.getElementsByClassName("toggle_button")[0].classList.add("active")
+
+
+
+document.getElementsByClassName("toggle_button")[0].classList.remove("active")
+
+
+
+document.querySelector(".toggle_button").classList
+// document.querySelector(".toggle_button")
+// 전체문서중 class이름이 첫번째인것만 가져옴?? (인덱스넘버 [0]을 지정해주는것과 같은듯?)
+
+
+document.querySelector(".toggle_button").classList.add("active")
+
+
+
+document.querySelector(".toggle_button").classList.remove("active")

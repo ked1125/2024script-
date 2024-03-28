@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dan3{background-color: pink;}
+        .viewWrap{display: flex;
+        justify-content: space-between;}
+    </style>
+</head>
+<body>
+    <h1>test</h1>
+    <h2>test2</h2>
+    <h3>test3</h3>
+    <h4>test4</h4>
+    <h5>test5</h5>
+    <h6>test6</h6>
+    <p>Lorem ipsum dolor sit.</p>
+
+
+    <script>
+        var num = 10;
+        var num = 102;
+        // var로 선언된 변수의 경우, 재정의된다. 따라서 중복되면 재정의되어 에러가나진않는다.
+
+        document.write(num + "<br>");
+
+        let myNum = 100;
+        // let myNum = 10; => let으로 선언된 변수의경우, 동일하게 let으로 재정의는 불가능
+        myNum = 10;
+        document.write(myNum + "<br>");
+
+
+
+        // for(초기값 ; 조건문 ; 증감연산자){} ;
+
+
+        for(let i = 1; i<= 10 ; i++){
+            document.write(i+"<br>")
+    }
+
+        
+    let sum = 0 ;
+        for(let i=1 ; i<=10 ; i++){
+            sum = sum + i ;
+            document.write(sum + "<br>");
+        }
+        document.write("총합은 : " +sum + "<br><br><br>") ; 
+
+
+
+
+        for (let i = 0; i < 10; i++) {
+            document.write( " 3X" + i  + "=" + 3*i+ "<br>")
+            
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+
+    <div class = "dan3">
+        <script>
+            for (let i = 0; i < 10; i++) {
+                document.write( " 3X" + i  + "=" + 3*i+ "<br>")
+                
+            }
+        </script>
+    </div>
+
+
+
+
+
+    <script>
+        document.write("<hr>")
+        document.write("<div class='viewWrap'>")
+        for(let dan = 1 ; dan<10 ; dan++){
+            document.write("<div class='view'>")
+            document.write(dan + "단" + "<br>")
+            for(let j = 1 ; j<10 ; j++){
+                document.write(dan + "x" + j + "=" +dan*j + "<br>")
+            }
+            document.write("</div>")
+        }
+        document.write("</div>")
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <img src="./mount.webp" alt="산">
+    <br>
+    <!-- 줄바꿈태그 -->
+    <hr>
+    <!-- hr태그는 구역 구분해주는 라인을 그어줌 -->
+</body>
+</html>

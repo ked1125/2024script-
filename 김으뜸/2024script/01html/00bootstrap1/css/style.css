@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* .visualtext {
+  display: flex;
+  flex-direction: column; */
+/* x축과 y축을 바꿈.. */
+/* justify-content: center; */
+/* 원래는 jfc-> x축변경이지만 column으로 바뀐상태라 y축이변경된다. */
+/* align-items: start; */
+/* 원래는 alitem -> y축 변경이지만 column으로 바뀐상태라 x축이 변경된다. */
+/* } */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.visual {
+  background: skyblue;
+}
+
+.cont-1st .card {
+  transition: 0.3s;
+  transform: translate(0px, 0px);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.cont-1st .cardWrap:hover .card {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.cont-1st .card img {
+  height: 150px;
+}
+
+.const-2st .view {
+  height: 500px;
+}
+
+.bg-gray {
+  background: #eee;
+}

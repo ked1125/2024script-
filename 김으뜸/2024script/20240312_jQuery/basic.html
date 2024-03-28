@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        position: relative;
+        transition: 0.3s;
+        left: 0;
+      }
+      .box.active {
+        background-color: pink;
+        left: -100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="btn">추가</button>
+    <button class="btn_out">제거</button>
+    <div class="box"></div>
+
+    <!-- jQuery 라이브러리 링크 복사 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // 자바스크립트형식으로 아래 코드 동일하게 표현
+      document
+        .getElementsByClassName("btn")[0]
+        .addEventListener("click", function () {
+          document.querySelector(".box").classList.add("active");
+        });
+
+      document
+        .querySelector("body>button.btn_out")
+        .addEventListener("click", () => {
+          document.querySelector(".box").classList.remove("active");
+        });
+
+      //   제이쿼리형식으로 위의 코드 동일하게 표현 start
+      //   $(".btn").on("click", function () {
+      //     $(".box").addClass("active");
+      //   let attrView = $(".box").attr("class","");
+      //   let attrView = $(".box").attr("class", "box active");
+      //   console.log(attrView);
+      //     $(".box").css("bisplay", "none");
+      //   });
+
+      //   $(".btn_out").click(function () {
+      //     $("body>div.box").removeClass("active");
+      //   });
+      //   제이쿼리형식으로 위의 코드 동일하게 표현 end
+
+      //   document.getElementsByClassName("box")[0].innerHTML = "홍길동";
+
+      //   함수의 형태 설명 예시
+      //   function fn() {
+      //     return 100;
+      //   }
+
+      //   let fn = function () {
+      //     return 1000;
+      //   };
+
+      //   let fn = () => {
+      //     return 1000;
+      //   };
+
+      //   let fn = () => 1000;
+      // let fn = (a) => 1000 + a;
+
+      //   let num = fn();
+      // let num = fn(10);
+      // console.log(num);
+      //   함수형태 설명 예시 끝
+    </script>
+  </body>
+</html>

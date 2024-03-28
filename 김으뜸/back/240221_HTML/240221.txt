@@ -1,0 +1,54 @@
+js & 피그마 (프로토타입)
+
+MYSQL
+
+몽고디비??(노드제이...?)
+
+리액트네이티브
+
+자바 (JPA?JDK??) - 백앤드(데이터베이스, 자바 연동으로 웹 구현 -백작업 - 리액트네이티브로 화면단에 배포)
+
+
+
+JVM - jre? - *오라클(데이터베이스 회사 - JAVA 인수*
+
+*JRE - JVM을 동작하는데 필요한 자바 라이브러리
+*JDK - 자바 개발 키트 (Java Development Kit) - JRE와 javac등의 컴파일러, 디버거등을 포함하는 프로그램.
+※JDK는 JRE를 포함하고 있다
+
+※ORACLE 이 JAVA, MySQL, LINUX, NoSQL등을 인수한상태이다
+
+
+
+
+메뉴창 상단고정
+
+
+렐러티브는 m0auto 사용 가능 (앱솔루트값은 m0auto값을 먹지 않음!!!)
+보통 부모에는 렐러티브값 설정해주고 (포지션이 있어야 하므로)
+앱솔루트값은 자유로운영혼???ㅎㅎ _ 좌표값 (left 혹은 top등 정확한 __px)을 지정해줄 수 있다.
+
+
+
+
+
+
+
+
+=========JAVA시작=========
+
+java
+int num = 10;
+String name = "han"
+
+
+javascript > typescript
+let num = 10;
+let name = "han"
+
+
+front) 리액트. 뷰?...
+   |
+          API " 공공데이터포탈 에서 확인가능함"
+   |
+back)  톰캣. 아파치...

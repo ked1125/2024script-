@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let objData2 = [
+        {    name:"sonata",
+            speed:100,
+            color:"red"
+        },
+
+        {
+            name:"tico",
+            speed:70,
+            color:"blue"
+        }
+        ]
+        console.log(objData2[0]);
+        console.log(objData2[1].name);
+
+
+        let objData = [
+            {name:"한주민", speed:100,color:"yellow"},
+            {name:"한성용", speed:50,color:"black"},
+            {name:"한성용3", speed:50,color:"black"},
+            {name:"한성용4", speed:50,color:"black"}
+        ]
+
+        console.log(objData[0].name);
+        console.log(objData[0].color);
+
+
+
+
+        for(let i = 0 ; i < objData.length ; i++){
+            document.write("이름데이터는 "+objData[i].name+"<br>")
+            document.write("속도는 "+objData[i].speed+"<br>")
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,4 @@
+@charset "utf-8"; /*주석등에 있어 한글을 사용하기 위해 꼭 설정해야 함.*
+/* reset */
+*{margin: 0; padding: 0;box-sizing: border-box;} /* 전체 설정값, 보더박스 잊지 말고 꼭 해주기 */
+a:link,a:visited{text-decoration: none; color: #333;}

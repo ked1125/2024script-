@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 컴퓨터에서 *은 보통 All의 의미를 가지므로, *{}는 모든영역에서 해당되는사항이라는 의미 */
+        div.card{
+            width:400px;
+            background-color: skyblue;
+        }
+        div.card > img{
+            display:block;
+            width:100%;
+            /* width값은 인라인에선 적용 불가하므로, block값으로 처리해줘야한다. */
+        }
+        div.card > div.textWrap{
+            padding:20px; 
+            /* padding : 0 0 0 0 ;
+               pading : 0 0 ; */
+        }
+        div.card > div.textWrap > h3{
+            margin-bottom: 10px
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="link01.jpg" alt="">
+        <div class="textWrap">
+            <h3>문화 만들기</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sed?</p>
+        </div>
+    </div>
+</body>
+</html>

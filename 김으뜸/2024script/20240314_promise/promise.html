@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let myCalc = new Promise(function (resolve, reject) {
+      //     setTimeout(function () {
+      //       reject();
+      //     }, 5000);
+      //   });
+
+      //   myCalc
+      //     .then(function () {
+      //       console.log("성공입니다.");
+      //     })
+      //     .catch(function () {
+      //       console.log("실패입니다.");
+      //     });
+      //   // myCalc.then(function(){}).catch(function(){})
+
+      //   async만 쓰여도 promise 사용가능.
+      //   async function fn() {
+      //     return Promise.reject();
+      //   }
+
+      //   //   fn().then().catch()
+      //   fn()
+      //     .then(function (num) {
+      //       console.log("안녕하세요1" + num);
+      //     })
+      //     .catch(function () {
+      //       console.log("실패");
+      //     });
+
+      async function fn1() {
+        let myFn = new Promise(function (resolve, reject) {
+          reject(100);
+        });
+
+        // try {
+        //   실행;
+        // } catch (error) {}
+        try {
+          let result = await myFn; //   await는 async와 함께 쓰임, 단독으로 사용 ㄴㄴ
+          console.log(result);
+        } catch (error) {
+          console.log("실패");
+        }
+
+        console.log("실행완료");
+
+        // myFn
+        //   .then(function (num) {
+        //     console.log("성공" + num);
+        //   })
+        //   .catch(function () {});
+      }
+
+      fn1();
+    </script>
+  </body>
+</html>

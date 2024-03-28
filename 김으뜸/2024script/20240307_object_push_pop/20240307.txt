@@ -1,0 +1,16 @@
+*객체
+- 세상에 존재하는 모든 것
+
+*자동차 객체의 모델링
+- 속성 : 모델명, 연비, 색상, 도어 수...
+- 기능 : 시동걸기, 속도내기, 멈추기, 변속하기....
+*속성예시
+=>car.name = "Sonata"
+=>car.speed=100
+=>car.color="white"
+=>car.door=4
+*메소드예시
+car.start(){}
+car.aceel(){}
+car.break(){}
+car.transe(){}

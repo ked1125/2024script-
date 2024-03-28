@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        var first = "han_";
+        var last = "sung yong";
+        var name = first + last ;
+        document.write(first + last +"<br><br>");
+        document.write(name + "님 안녕하세요!<br><br><br><br>");
+        document.write("안녕하세요?<br><br><br>");
+        </script>
+
+
+
+    <script>
+        var x = 5;
+        var y = 7;
+        var result ; // 언디파인디드 (!= null과는 다르다.)
+        var result2 ;
+        var title;
+
+        // result = (조건문) ? true시 : false시 ;
+        // 조건문이 참이면 true시에 적힌 값, 거짓이면 false시에 적힌 값 저장
+
+
+        result = (x > y) ? x : y ; // result = y, 즉 거짓(F)
+        console.log(result) ; 
+        
+        result2 = (x < y) ? x : y ; // result = x, 즉 참(T)
+        console.log(result2) ; 
+
+
+
+        if(x>y){
+            result = x // 조건식이 true일경우 저장될 값
+            title = "x" ;
+        }else{
+            result = y // 조건식이 false일 경우 저장될 값
+            title = "y" ;
+        }
+
+        // if(조건문1){
+        //     조건문 1이 true 실행
+        // } else if(조건문2) {
+        //     조건문2가 true일 때 실행
+        // } else{
+        //      전부 false일 때 실행
+        // }
+
+
+         console.log("큰 값은" + title + "이고, 값은 " + result +"입니다.")
+         console.log(`큰값은 ${title}이고 값은 ${result} 입니다.`)
+         document.write(`큰값은 ${title}이고 값은 ${result} 입니다.`)
+
+
+    </script>
+
+
+
+
+    <script>
+        var xNum = 10;
+        xNum += 100; // xNum => xNum + 100을 의미
+
+        // alert(xNum) ;
+        console.log(xNum) ;
+
+
+        var myName = "홍길동" ;
+        myName += "입니다." ; // myName = myName + "입니다."
+        console.log(myName);
+        myName += "!!" ; // myName = myName + "입니다." + "!!"
+        console.log(myName);
+    </script>
+
+
+
+
+
+    <script>
+        var id, password;
+        id = prompt('아이디 입력') // 알람창에 사용자로부터 값을 입력 받을 수 있는 아이디입력창이 뜨는데, 
+        // 입력된 값은 콘솔창에서 id라고 입력하면 호출된다 //
+        if (id == "admin"){
+            password = prompt('비밀번호 입력')
+            if(password == '1234'){
+                location.href = "login.html"
+            }else{
+                location.href = "error.html"
+            }
+        } else{
+            location.href = "error.html"
+        }
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

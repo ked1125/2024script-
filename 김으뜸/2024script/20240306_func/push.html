@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+
+    
+</head>
+<body>
+
+    <!-- ※input+button.btn※ -->
+
+
+
+    <!-- <form action="go.html" method="post">
+        <input type="text" name="todo" value="">
+    </form> -->
+    
+
+    <input type="text" value="" class="todo">
+    <button class="btn">오늘의 할 일</button>
+
+    <ul class="vList">
+
+    </ul>
+
+
+    <script>
+
+
+        const todoElm = document.getElementsByClassName('todo')[0]
+        // 여기선 .todo쓰면안됨
+        const btnElm = document.getElementsByClassName('btn')[0]
+        const vListElm = document.getElementsByClassName('vList')[0]
+
+        const viewList = ["한성용", "홍길동", "이순신"];
+
+
+        // btnElm.addEventListener("click",function(){})
+        btnElm.addEventListener("click",function(){ // 버튼 클릭!
+             // alert(todoElm.value)
+             // console.log(todoElm.value);
+            viewList.push(todoElm.value)    // viewList에 value create!!!
+            todoElm.value = ''              // input value 초기화
+
+
+            //입력된 데이터값 누적을 위해 for문 이용
+            let textList = '' // 문자 초기값
+            for(let i = 0 ; i<viewList.length ; i++){
+                textList += `<li>${viewList[i]}</li>`
+                //->동일표현 textList = textList + `<li>${viewList[i]}</li>`
+            }
+            console.log(textList);
+
+            vListElm.innerHTML = textList;
+
+        
+
+
+        })
+
+
+
+
+
+        // $(".todo")
+    </script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="name">이춘식</div>
+    <div class="color">이춘식</div> -->
+
+    <table class="table"></table>
+    <script src="car.js"></script>
+    <script type="module">
+      function add(a, b) {
+        return a + b;
+      }
+
+      let sum = add(10, 20);
+      console.log(sum);
+
+      //   import car from "./car.js";
+
+      let text = "<tr><td>이름</td><td>색상</td><td>스피드</td></tr>";
+
+      //   let text = "";
+      //   for (let i = 0; i < car.length; i++) {
+      // text = text + "<tr><td></td><td></td><td></td></tr>";
+      // text = text + "<tr>";
+      // text += "    <td>" + car[i].name + "</td>";
+      // text += "    <td>" + car[i].color + "</td>";
+      // text += "    <td>" + car[i].speed + "</td>";
+      // test += `<td>${car[i].name}</td>`;
+      // text = text + "</tr>";
+      // text += "<li>adsf</li>";
+      //   }
+
+      // for (let i = 0; i < car.length; i++) {
+      //   text += `<tr>
+      //               <td>${car[i].name}</td>
+      //               <td>${car[i].color}</td>
+      //               <td>${car[i].speed}</td>
+      //           </tr>
+      //       `;
+      // }
+
+      for (let i in car) {
+        text += `<tr>
+                      <td>${i + 1}</td>
+                      <td>${car[i].name}</td>
+                      <td>${car[i].color}</td>
+                      <td>${car[i].speed}</td>
+                  </tr>`;
+      }
+
+      document.querySelector(".table").innerHTML = text;
+
+      //   console.log(car[0].name);
+      //   console.log(car[1].name);
+      //   console.log(car[2].name);
+      //   console.log(car[3].name);
+      //   console.log(car[4].name);
+
+      //   document.querySelector(".name").innerHTML = car[0].name;
+      //   document.querySelector(".color").innerHTML = car[0].color;
+    </script>
+  </body>
+</html>

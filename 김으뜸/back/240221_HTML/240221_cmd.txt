@@ -1,0 +1,77 @@
+Microsoft Windows [Version 10.0.19045.4046]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\EZEN>java --version
+java 17.0.10 2024-01-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
+
+C:\Users\EZEN>jshell
+|  Welcome to JShell -- Version 17.0.10
+|  For an introduction type: /help intro
+
+jshell> /exit
+|  Goodbye
+
+C:\Users\EZEN>clear
+'clear'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\EZEN>shell
+'shell'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\EZEN>jshell
+|  Welcome to JShell -- Version 17.0.10
+|  For an introduction type: /help intro
+
+jshell> 4*4
+$1 ==> 16
+
+jshell> test
+|  Error:
+|  cannot find symbol
+|    symbol:   variable test
+|  test
+|  ^--^
+
+jshell> "test"
+$2 ==> "test"
+
+jshell> String a = "test"
+a ==> "test"
+
+jshell> 4+4
+$4 ==> 8
+
+jshell> /list
+
+   1 : 4*4
+   2 : "test"
+   3 : String a = "test";
+   4 : 4+4
+
+jshell> int num = 10
+num ==> 10
+
+jshell> num
+num ==> 10
+
+jshell> num = 100
+num ==> 100
+
+jshell> num
+num ==> 100
+
+jshell> /exit
+|  Goodbye
+
+C:\Users\EZEN>java -version
+java version "17.0.10" 2024-01-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
+
+C:\Users\EZEN>
+
+
+---------2024 cmd 콘솔창에서 jshell 활용해본거-------

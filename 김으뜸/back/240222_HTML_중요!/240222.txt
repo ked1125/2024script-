@@ -1,0 +1,24 @@
+??? position이랑 뭐가 다른거징 x,y축 이동이면....ㅜㅜ?
+transform: translate(변수)
+transform: translate(x,y)
+transform : translate(50px,50px) - > x축으로 50px, y축으로 50px만큼 이동
+
+scale(변수)
+sclae(x,y)
+sclae(2,2) ※ 1 = 100%를 의미
+
+
+
+*함수의 기본 구조  :: 메서드(매개변수){수식?행동?} ; _ 기본적으로 (){};를 가지고 있다고 생각하면 됨!
+      :: 함수에 저장된 작업이 실행된다.
+      :: 메서드 :: 이행되는 행동. 행위
+
+
+변수 :: 변하는 data ( 수정가능한 data ) _ 스택 공간에 저장
+상수 :: 변하지 않는 data ( 수정 불가능한 data ) _ 힙?에 저장 (오브젝트?)
+
+class :: 객체의 도면, 청사진.
+실체화를 위해 new..
+오브젝트?
+클래스에서 객체 첫 생성시
+ex) Contry korea = new Contry()

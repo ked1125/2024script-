@@ -1,0 +1,274 @@
+Microsoft Windows [Version 10.0.19045.4046]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\EZEN>java -version
+java version "17.0.10" 2024-01-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
+
+C:\Users\EZEN>java --version
+java 17.0.10 2024-01-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
+
+C:\Users\EZEN>python --version
+Python
+C:\Users\EZEN>/exit
+'/exit'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\EZEN>jshell
+|  Welcome to JShell -- Version 17.0.10
+|  For an introduction type: /help intro
+
+jshell> System.out.print("Hello World");
+Hello World
+jshell> sysout("hello world")
+|  Error:
+|  cannot find symbol
+|    symbol:   method sysout(java.lang.String)
+|  sysout("hello world")
+|  ^----^
+
+jshell> ;
+
+jshell> name = "문자"
+|  Error:
+|  cannot find symbol
+|    symbol:   variable name
+|  name = "문자"
+|  ^--^
+
+jshell> String name = "문자"
+name ==> "문자"
+
+jshell> stirng name = "문자"
+|  Error:
+|  cannot find symbol
+|    symbol:   class stirng
+|  stirng name = "문자";
+|  ^----^
+
+jshell> String name = "test"
+name ==> "test"
+
+jshell> /list
+
+   1 : System.out.print("Hello World");
+   2 : ;
+   4 : String name = "test";
+
+jshell> int a = 3 ;
+a ==> 3
+
+jshell> String name = "test";
+name ==> "test"
+
+jshell> name
+name ==> "test"
+
+jshell> int num = 10 ;
+num ==> 10
+
+jshell> /list
+
+   1 : System.out.print("Hello World");
+   2 : ;
+   5 : int a = 3 ;
+   6 : String name = "test";
+   7 : name
+   8 : int num = 10 ;
+
+jshell> num = num + 10
+num ==> 20
+
+jshell> num
+num ==> 20
+
+jshell> /list
+
+   1 : System.out.print("Hello World");
+   2 : ;
+   5 : int a = 3 ;
+   6 : String name = "test";
+   7 : name
+   8 : int num = 10 ;
+   9 : num = num + 10
+  10 : num
+
+jshell> name + num
+$11 ==> "test20"
+
+jshell> name = name + "!!"
+name ==> "test!!"
+
+jshell> name
+name ==> "test!!"
+
+jshell> /list
+
+   1 : System.out.print("Hello World");
+   2 : ;
+   5 : int a = 3 ;
+   6 : String name = "test";
+   7 : name
+   8 : int num = 10 ;
+   9 : num = num + 10
+  10 : num
+  11 : name + num
+  12 : name = name + "!!"
+  13 : name
+
+jshell> /clear
+|  Invalid command: /clear
+|  Type /help for help.
+
+jshell> /list
+
+   1 : System.out.print("Hello World");
+   2 : ;
+   5 : int a = 3 ;
+   6 : String name = "test";
+   7 : name
+   8 : int num = 10 ;
+   9 : num = num + 10
+  10 : num
+  11 : name + num
+  12 : name = name + "!!"
+  13 : name
+
+jshell> /eixt
+|  Invalid command: /eixt
+|  Type /help for help.
+
+jshell> System.out.println("test");
+test
+
+jshell> System.out.println(name);
+test!!
+
+jshell> name
+name ==> "test!!"
+
+jshell> System.out.println("10*10=100");
+10*10=100
+
+jshell> System.out.println("100");
+100
+
+jshell> System.out.println(100);
+100
+
+jshell> System.out.println(num);
+20
+
+jshell> /list
+
+   1 : System.out.print("Hello World");
+   2 : ;
+   5 : int a = 3 ;
+   6 : String name = "test";
+   7 : name
+   8 : int num = 10 ;
+   9 : num = num + 10
+  10 : num
+  11 : name + num
+  12 : name = name + "!!"
+  13 : name
+  14 : System.out.println("test");
+  15 : System.out.println(name);
+  16 : name
+  17 : System.out.println("10*10=100");
+  18 : System.out.println("100");
+  19 : System.out.println(100);
+  20 : System.out.println(num);
+
+jshell> class Contry{}
+|  created class Contry
+
+jshell> contry
+|  Error:
+|  cannot find symbol
+|    symbol:   variable contry
+|  contry
+|  ^----^
+
+jshell> Contry()
+|  Error:
+|  cannot find symbol
+|    symbol:   method Contry()
+|  Contry()
+|  ^----^
+
+jshell> korea = new Contry()
+|  Error:
+|  cannot find symbol
+|    symbol:   variable korea
+|  korea = new Contry()
+|  ^---^
+
+jshell> Contry korea = new Contry()
+korea ==> Contry@1376c05c
+
+jshell> Systerm.out.println(korea)
+|  Error:
+|  package Systerm does not exist
+|  Systerm.out.println(korea)
+|  ^---------^
+
+jshell> System.out.println(korea)
+REPL.$JShell$31$Contry@1376c05c
+
+jshell> korea
+korea ==> Contry@1376c05c
+
+jshell> class Planet{}
+|  created class Planet
+
+jshell> class palanet{
+<press tab again to see all possible completions; total possible completions: 539>
+jshell> class palanet{
+   ...>     void revolve()}
+|  Error:
+|  ';' expected
+|      void revolve()}
+|                    ^
+
+jshell> class Planet{
+   ...>     void revolve(){
+   ...>         System.out.println("돌아요");
+   ...>     }
+   ...> }
+|  replaced class Planet
+
+jshell> planet
+|  Error:
+|  cannot find symbol
+|    symbol:   variable planet
+|  planet
+|  ^----^
+
+jshell> Planet
+|  Error:
+|  cannot find symbol
+|    symbol:   variable Planet
+|  Planet
+|  ^----^
+
+jshell> class Planet{
+   ...>     void revolve(){
+   ...>         System.out.println("돌아요");
+   ...>     }
+   ...> }
+|  modified class Planet
+
+jshell> Planet earth = new Planet()
+earth ==> Planet@20fa23c1
+
+jshell> System.out.print(earth);
+REPL.$JShell$39B$Planet@20fa23c1
+jshell> earth
+earth ==> Planet@20fa23c1
+
+jshell> earth.revolve()
+돌아요

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* img{display:block} */
+        /* -> img태그는 원래 인라인 태그인데, 블록단위태그로 수정을 원할 경우 해당사항처럼 코딩해주면됨 */
+        
+        /* img.pic1{display:block} */
+        /* -> test이미지들 여러개 중 하나만 블록단위로 수정원할 경우 */
+        /* .pic1{display:block} 혹은 body>img.pic1{} 혹은 body>.pic1{} 혹은 .pic1{}라고 표현해도 동일표현 */
+       
+        body > div.imgWrap{
+            background-color: skyblue;
+            width:200px;
+            /* overflow: hidden;  : 넘치는부분 숨김??*/
+            margin-left: auto;
+            /* margin: 0 auto; */
+            /* margin: 0 auto; : 화면 중앙에 알아서 배치됨. 화면넓이 줄이고 넓혀도! */
+           /* margin-left: auto; : 화면의 가장 오른쪽?에 붙음 auto는 최대값을 부여하게됨. */
+           /* margin-right: auto; : 화면의 가장 왼쪽에 붙음 (auto=최대값부여됨) 따라서 left+right에 auto값 부여시 중앙정렬이된다고 보면됩니다.*/
+
+           
+           /* margin: T R B L;  : 12시 3시 6시 9시 방향으로 한번에 숫자 혹은 auto 입력가능*/
+           /* margin: _ _ : 위아래, 좌우값을 입력하면됨*/
+        }
+        /* -> 동일표현 div.imgWrap{background-color: skyblue;width:200px;}, 마지막의 px뒤의 ;은 생략가능 */
+        
+        div.imgwrap > img{
+            width:100%
+            display:block
+        }
+        /* ★★width:100% => 부모자의 크기의 100% 만큼 이미지의 활용을 원할 때!! 중요함★ */
+        /* > 바로밑의, 직계 자손을 의미 child, 그냥 감싸고있는 자손 전체로 쓰고싶으면 >자리를 걍 띄어쓰기 공백으로 두면 됨. */
+        
+    </style>
+</head>
+<body>
+    <!-- 알+L+O 웹 라이브화면 -->
+    <!-- 행복사 쉬+알+↓ -->
+    <!-- 알+방향키  행이동 -->
+    <!-- 컨+/ 주석처리 -->
+    test1
+    <div class="imgWrap">
+        <!-- div로 분리하면서, imgWrap이라는 클래스명을 부여함 -->
+        
+        <a href="https://www.naver.com">test</a>
+        <!-- <a href="https://www.naver.com" target="_blank">test</a>  :: 새창에서 열림-->
+        <!-- <a href="https://www.naver.com" target="_self">test</a>  :: 해당페이지변경, 사진자체 클릭으로????ㅡㅡ??-->
+        <!-- a태그 :: 인라인태그! 현재 페이지에서 변경이됨 -->
+        
+        <img src="view.jpg" alt="구름" width="100" height="100" class="pic1">
+        <!-- ->해당 img태그는 div의 부모인 body크기만큼 한 줄을 전부 차지하여 블록단위처럼 처리된다 -->
+    </div>
+    <img src="view.jpg" alt="구름" width="100">
+    <img src="view1.jpg" alt="연예인" width="100">
+    <!-- <img src="view1.jpg" alt="구름">과같이 파일명 일치하지 않는 오류발생시 구름이라는 글자가 뜬다 -->
+    <div>11</div>
+</body>
+</html>

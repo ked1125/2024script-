@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+a:link,a:visited{text-decoration: none;}
+ul,li{list-style: none;}
+
+html,body{height: 100%;}
+body{display: flex;justify-content: center;align-items: center;}
+
+.toggle_button{
+    width: 20px;
+    height: 20px;
+    background-color: skyblue;
+    position: relative;
+}
+
+.toggle_button>.bar{
+    width: 20px;
+    height: 2px;
+    background-color: brown;
+    border-radius: 1px;
+    /* bora1 */
+    position: absolute;
+    /* poa - 하는 순간 bar3개가 한꺼번에 겹쳐짐 */
+    /* bar들의 위치를 정의하기 위해 선언, -> button내에서 위치 지정하기위해 button에 부모자지정을위한 por 해줄거임.
+    buttpn에 por을 안먹이면 부모를 body로 인식 */
+    transition: 0.3s;
+}
+
+.toggle_button > .bar:nth-child(2){
+    /* 버튼자식으로 있는 바중 2번째 자식값 지정 */
+    top: 50%;
+    margin-top: -1px;
+    /* 50%로 위치값 지정 시작될 경우, 아이콘의 두께인 2px만큼이 내려간거나 다름없으니
+    중간값인 -1px만큼 1px을 위로 올려줘야 정중앙.. */
+    opacity: 1;
+    /* opacity : 1 있음, 0 없음 */
+}
+
+.toggle_button > .bar:nth-child(3){
+    /* 버튼자식으로 있는 바중 번째 자식값 지정 */
+    bottom: 0;
+}
+
+
+.toggle_button.active>.bar:nth-child(1){
+    transform : translate(0, 9px) rotate(45deg);
+    /* transform:translate(x값px, y값px) rotate(45deg); */
+}
+.toggle_button.active>.bar:nth-child(2){
+    opacity : 0
+    /* opacity : 0 - 없음, 1 - 있음 */
+}
+.toggle_button.active>.bar:nth-child(3){
+    background-color: blue;
+    transform : translate(0, -9px) rotate(-45deg);
+}
+
+
+
+/* common - 지정해서 해줄때 우선순위 높이기 위해 !important 적용 */
+.red{
+    background-color: red !important;
+}
+.mb10{margin-bottom: 10px !important;}

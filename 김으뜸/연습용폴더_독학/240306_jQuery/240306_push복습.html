@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+
+    <input type="text" value="" class="todo">
+    <!-- input.todo -->
+
+    <button class="btn">오늘의 할 일</button>
+    <!-- button.btn -->
+
+    <ul class="vList">
+
+    </ul>
+    <!-- ul.vList -->
+
+
+
+
+    <script>
+
+        const todoElm = document.getElementsByClassName("todo")[0]
+        const btnElm = document.getElementsByClassName("btn")[0]
+        const vListElm = document.getElementsByClassName("vList")[0]
+
+        const viewList=["java", "python", "javascript"];
+
+
+        btnElm.addEventListener("click",function(){
+            viewList.push(todoElm.value)
+            todoElm.value=''
+
+            let textList=''
+            for(let i = 0 ; i < viewList.length ; i++){
+
+            }
+        })
+
+        
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

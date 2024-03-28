@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   var test = 1;
+      //   test = 100;
+      //   var test = 10;
+      //   console.log(test);
+
+      //   let num = 10;
+      //   num = 100;
+
+      //   console.log("num : " + num);
+      //   const result = 1000;
+      //   //   result = 10;
+
+      //   console.log(result);
+      //   let han = 1000;
+      //   //   전역변수로서 사용한 let
+
+      //   function fn() {
+      //     let han = "안녕하세요";
+      //     // {} 안에 있는 것 let은 지역변수임. 스코프 범위 내에서만 사용 가능.
+
+      //     console.log(han);
+      //   }
+      //   fn();
+
+      //   console.log(han);
+
+      let myCalc = new Promise(function (resolve, reject) {
+        // Promise는 쉽게 생각하면 성공/실패를 만들어 내는 기계라고 보면 된다. (resolve혹은 reject)
+        // let han = "test";
+        // if (han == "test") {
+        //   resolve();
+        //   let sum = 1000 + 1000;
+        //   resolve(sum);
+        // } else {
+        //   //   reject();
+        //   reject(sum);
+        // }
+
+        // console.log(han);
+
+        // resolve();
+        // reject();
+
+        setTimeout(function () {
+          resolve();
+        }, 3000);
+      });
+
+      myCalc
+        .then(function () {
+          console.log("성공입니다.");
+        })
+        .catch(function () {
+          console.log("실패입니다.");
+        });
+
+      //   function fn(name) {
+      //     console.log(name);
+      //   }
+      //   fn();
+
+      //   myCalc.then().catch();
+      //   then은 성공했을 때(resolve), catch는 거부(reject)되었을 때!
+
+      async function fn() {
+        // 원래 항상 성공만 나옴..???-.-?
+        // console.log("안녕하세요");
+        // return Promise.reject();
+
+        return "홍길동";
+      }
+
+      fn()
+        .then(function (num) {
+          console.log("안녕하세요" + num);
+        })
+        .catch(function () {
+          console.log("실패");
+        });
+
+      async function fn1() {
+        // Promise, async구문 이해가 안감! ㅜㅜ
+        let myFn = new Promise(function (resolve, reject) {
+          reject();
+          //   resolve();
+        });
+
+        try {
+          let result = await myFn;
+          console.log(result);
+        } catch (error) {
+          console.log("실패");
+        }
+
+        console.log("실행완료");
+
+        //     myFn
+        //       .then(function () {
+        //         console.log("성공");
+        //       })
+        //       .catch(function () {});
+      }
+
+      fn1();
+    </script>
+  </body>
+</html>

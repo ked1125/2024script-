@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        a:link,a:visited{text-decoration: none;color: #333;}
+
+        body{background-color: pink;}
+        /* 바디파트도 일종의 블록값이라고 보면 된다. */
+        .bannerWrap{
+            background-color: skyblue;
+            height: 100vh;
+            /* 현재 화면 Viewport의(크기에 따라 다름_반응형) 100%를 사용하겠다는 의미와 유사.. */
+            /* 바디파트에 높이값을 따로 지정하지 않았기 때문에 height 100%는 적용불가하다 _ height 100%는 부모자에 높이값이 있을때만 적용 가능 */
+            min-height: 768px;
+
+
+            width: 100%;
+            min-width: 1140px;
+
+
+            background-image: url(./img/new_main_visual_bg04.webp);
+            /* background-image: url(./동일폴더내의 하위폴더나 이미지파일); */
+            background-repeat: no-repeat;
+            background-color: #fff;
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        .banner{
+            background: gold;
+            margin: 0 auto;
+            width: 1140px;
+            height: 100%;
+            /* ★height는 부모자가 높이값이 있어야만 적용 가능함!!!★_ 적용안할시 블록단위라 한블록만 높이잡힘 */
+            color: white;
+            /* a태그에는 위에 *{}로 #333을 따로 지정해놨기 때문에, 다시 직접 지정해서 컬러를 넣지 않는 이상 전체 리셋값의 영향을 받는다. */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /*
+        .banner a{
+             =>동일표현) .banner>txtWrap>a{} "꺾쇠(>)는 바로 직계자손만 호출가능"
+                => .banner클래스 내의 직계자손말고 그냥 후손호출시 띄어쓰기 한칸만! 꺾쇠는 직계를 꼭 거쳐야함.
+            color: #fff;
+             a태그에는 위에 *{}로 #333을 따로 지정해놨기 때문에, 다시 직접 지정해서 컬러를 넣음. 
+        }
+        
+        =>해당코드는 밑에서 .btn으로 a태그에 직접 클래스명 작성 후 호출, 사용해줬기 때문에 삭제해줬음
+        */
+
+        h3{
+            font-size: 50px;
+        }
+
+        p.title{
+            font-size: 20px;
+        }
+        
+        a.btn{
+            background-color: #333;
+            /* display: block; */
+            /* a태그는 인라인태그이므로 width,height값을 적용하기 위해선 꼭 블록단위로 변환해주는 작업이 필요하다.*/
+            /* 하지만 이경우엔 밑에서 display-flex를 적용하였으므로 의미없는코드라 삭제가능하다 */
+            width: 150px;
+            height: 50px;
+            border-radius: 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-weight: bold;
+
+            border: 1px solid #fff;
+            transition: 0.3s;   /* animation time */
+        }
+
+        a.btn.active{
+            background-color: #fff;
+            color:black;
+        }
+
+        a.btn:hover{
+            background-color: #fff;
+            color:black;
+        }
+
+
+        .menuWrap{
+            background-color: #2c0367;
+            min-width: 1140px;
+            gap: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20;
+            position: fixed;
+            width: 100%;
+        }
+
+        .mb10{margin-bottom: 10px !important;}
+        .mb20{margin-bottom: 20px !important;}
+
+    </style>
+</head>
+<body>
+    <div class="menuWrap">
+        <a href="#" class="btn active">HOME</a>
+        <a href="#" class="btn">COMPANY</a>
+        <a href="#" class="btn">PRODUCT</a>
+        <a href="#" class="btn">COMMUNITY</a>
+    </div>
+    
+    <div class="bannerWrap">    <!-- 100% min-width:1140 background-image -->
+        <div class="banner">    <!-- 1140px m0auto -->
+            <div class="txtWrap">
+                <h3 class="mb10">Lorem ipsum dolor sit amet.</h3>
+                <p class="mb20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, voluptatum!</p>
+                <a href="#" class="btn">자세히보기</a>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div style="height:1000px"></div>
+    <!-- 해당코드 주석 하냐 안하냐에 따라 스크롤이 생기고 안생기고 함.. banner에 먹인 100vh랑 min0height값때문 -->
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  /*스타일 태그 생성*/
+   a#link{background-color: skyblue;}
+   #link{background-color: blue;}
+   a.alink1{background-color: red;}
+    .alink1{background-color: green;}
+
+    /*원래 스타일시트는 기본적으로 위에서 아래로 진행이 되는데, 
+    태그.클래스이름{}코드가 .클래스이름{}코드보다 실행 우선순위가 높기 때문에 빨간색이 적용된다.
+    #아이디이름{}코드는 우선순위가 가장 최우선이므로 보라색이 최종적용된다 */
+    /* 전체선택자(*) < tag{}(1) < .class{}(10) < #id{}(100) < inline style(바디코드에서 바로 스타일지정하여 작성한 코드)의 순서로 */
+    </style>
+</head>
+<body>
+    <a href="https://www.naver.com" class="alink1" id="link" style="background-color: yellow;">네이버</a><br>
+    <!-- 위와 같이 바디 태그에 바로 작성한 style값을 inline style이라고 한다 -->
+
+    <a href="https://www.korea.com" >코리아</a> 
+<!-- a태그는 인라인태그, <br>로 줄바꿈. 인라인태그는 width값 부여 불가  -->
+<!-- id값은 문서 내에서 중복값 사용불가.(에러발생) , class는 중복값 사용 가능 -->
+
+ 
+
+    <a href="http:">link</a>
+    <!-- a>{link} 입력 후 tab -->
+
+    <a href="https://www.naver.com"></a>
+    <!-- a[href="https://www.naver.com"] 입력 후 tab -->
+
+    
+</body>
+</html>
+<!-- !입력 후 tab누르면 기본값 입력됨 -->
+<!-- 주석처리 컨+/ -->
+<!-- 알+위아래 화살표 행이동 -->
+<!-- 스타일 시트에서는 주석처리 /*내용*/ , body에서는 주석처리 <!--내용--> -->

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;, padding:0;}
+        /* CSS 리셋, 전체 선택자 마진값, 패딩값 전부 0으로 초기화 - 여백.. */
+        a:link{text-decoration:none;}
+        /* a의 링크값 설정 수정, 단축키:: text-decoration은 td누르고 tab누르면됨 */
+        a:visited{color:black}
+        /* 페이지 방문 후에도 색상 그대로 검정색. */
+        a: :hover{}
+        a: :active{}
+
+        .link{
+            background-color: #ff0000; 
+            width:100px;
+            height: 100px;
+            display: block;
+        }
+        /*link는 인라인 태그이므로 width값 적용안됨!! => block태그로 강제로 변경원할경우 display: block;을 적용해준다.*/
+        /* 단축키:: background-color - bgc누르고 tab누르면 됨
+        컬러코드는 16진법의 조합 #ff(R-0~255개 16*16개의조합,f는 full을 의미, 0은 없음)/ff(G-0~255개 16*16개의조합)/ff(B-0~255개 16*16개의조합) 총 -6숫자 */
+        .box{
+            background-color: #0000ff;
+            width:100px;
+            height: 100px;
+        }
+        /*블록 태그이므로 width값 적용가능. 인라인 태그로 강제 변경 원할경우, display: inline; 을 적용해준다.*/
+        .box1{
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+            margin-left: auto;
+            /* 단축키:: mla 탭 */
+            margin-right: auto;
+            /* 단축키:: mra 탭 */
+            /* margin : 0 auto; 가운데정렬이라는걸 꼭 기억해둘것*/
+        }
+        .box1 a{
+            display: block;
+            /* 블럭처리를 해줌 -> 안해줄 경우 width, height값을 적용할 수 없고, 그럼 마우스 클릭 영역이 너무 작아서 효율성 떨어짐. */
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            /*text-align: center;*/
+            /* tac */
+            /*line-height: 100px;*/
+            /* lh, 줄간격 */
+
+            display: flex;
+            /* df */
+            justify-content: center;
+            /* jcc, 가로축 */
+            align-items: center;
+            /* aic, 세로축 */
+            /*안에 있는 컨텐츠(a클래스의 자식컨텐츠)가 가운데에 정렬되도록 하기 위해 세가지 전부 적용해주기*/
+        }
+   </style>
+</head>
+<body>
+    <a href="https://www.naver.com" class="link">네이버</a>
+    <div class="box">test</div>
+
+
+    <br><br><br>
+    <!-- 줄바꿈태그 -->
+
+    <div class="box1">
+        <a href="#">link</a>
+    </div>
+</body>
+</html>
+<!-- !입력 후 tab누르면 기본값 입력됨 -->
+<!-- 주석처리★ 컨+/ -->
+<!-- 스타일 시트에서는 주석처리 /*내용*/ , body에서는 주석처리 <!--내용--> -->
+<!-- 알+위아래 화살표 행이동 -->
+<!-- 프로그램에서 *은 All을 의미함 -->

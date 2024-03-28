@@ -1,0 +1,8 @@
+비주얼스튜디오코드 확장
+
+*1. Material Icon Theme
+*2. Korean Language Pack for Visual Studio Code
+3. ESLint / TSLint
+*4. Live Server
+*5. Mithril Emmet ★★★
+*6. Color Picker

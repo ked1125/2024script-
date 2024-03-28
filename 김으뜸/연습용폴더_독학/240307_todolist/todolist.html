@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>push_clone</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+
+<body>
+    <input type="text" value="" class="todo" placeholder=" 오늘의 할 일✨">
+    <button class="btn">check!🥰</button>
+
+    <ul class="vList"></ul>
+
+    <!-- ★여기부분도 오늘 수정된부분임 -->
+    <!-- <button class="allDel">전체삭제🗑️</button> -->
+
+    <script>
+        const todoElm = document.getElementsByClassName("todo")[0];
+        const btnElm = document.getElementsByClassName("btn")[0];
+        const vListElm = document.getElementsByClassName("vList")[0];
+       
+        //★여기부분은 오늘수정된거임 순서 마지막쪽으로 미루기.
+        // const aDelElm = document.getElementsByClassName("allDel")[0];
+
+        let viewList = []; // ㄷ.여러개의 값을 저장했을 때 저장한값을 날리지 않고 계속 누적하여 저장하는 그릇을 우선 생성후 유사배열 형식으로 저장한다.
+
+        btnElm.addEventListener("click", function(){    // ㄱ. 내용입력후 check버튼 클릭시
+            console.log(todoElm.value);     // ㄴ. 입력한내용을 todo클래스의 value값에 저장하여 콘솔창에서 출력한다.
+
+            
+            // 🥲if(){}else{} 구문 이용해줄거임!
+            if(todoElm.value != ''){ // ㅂ?-1. 입력칸이 공백이 아닐 때, 즉 입력한 값이 있을 때
+                viewList.push(todoElm.value);
+                viewData()
+            }else{ // ㅂ?-2. 그렇지 않을 경우 -> 즉, 입력칸이 공백일 경우
+                alert("오늘의 할일을 입력하세요") // ㅂ?-3. 오늘의 할일을 입력하라는 주의문구를 띄워준다
+            }
+
+        });
+
+
+        //★여기부분은 오늘수정된거임 순서 마지막쪽으로 미루기. function 함수명(변수명){실행동작}
+        // function vListDel(idx){
+        //     console.log('삭제완료 : ' + idx)
+        //     viewList.splice(idx,1)
+        //     viewData()
+        // }
+
+
+
+        function viewData(){ // ㅁ. input박스에 입력한 데이터값을 화면에 표출하기 위한 viewData라는 함수를 생성 
+            todoElm.value = ""; // ㅁ-1. input에 입력 후 check박스 누르면 input박스노출값을 삭제해준다.
+
+            let textList = ""; // ㄹ-1. textList 변수 선언 및 데이터값 초기화
+
+
+            // ㄹ-2. textList값을 정의하기위해 if(){}else{} 구문 이용, +★입력된 데이터값의 누적을 위해 for문을 사용한다★
+            if(viewList.length > 0){
+                for(let i = 0 ; i < viewList.length ; i++){ // for(){}문 이용
+                // textList += <li><div></div><div></div></li> 안에 요소들이들어감
+                textList += `<li><div>${viewList[i]}</div><div class='del' onclick="vListDel(${i})">삭제</div></li>`
+                }
+            }else{
+                textList = "오늘은 쉬는날!!!!😎"
+            }
+
+            vListElm.innerHTML = textList; // ㄹ-3. HTML 문서 안의 vListElm값에 textList값을 저장한다.
+
+        } 
+
+
+
+
+    //     aDelElm.addEventListener("click",function(){
+    //     viewList = []
+    //     viewData();
+    //   })
+
+    //   viewData(); 
+      //처음 데이터 확인
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

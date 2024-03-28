@@ -1,0 +1,48 @@
+@charset "utf-8"; /*주석등에 있어 한글을 사용하기 위해 꼭 설정해야 함.*
+/* reset */
+*{margin: 0; padding: 0;box-sizing: border-box;} /* 전체 설정값, 보더박스 잊지 말고 꼭 해주기 */
+a:link,a:visited{text-decoration: none; color: #333;}
+
+html,body{height: 100%}
+body{display: flex;justify-content: center;align-items: center; gap: 20px;} 
+/* => 1) 자식요소여서 가운데에 배치 가능 */
+
+/* .imgView {
+    position: absolute;
+    left: 50%; top: 50%;
+    margin-left: -152px; margin-top: -218px;
+} */
+/*   => 2) block단위에서 가운데에 놓고 싶을 때, 수치값을 알아야 함  */
+/*  => 이미지 크기의 절반만큼 다시 이동시켜줌 */
+
+.imgView{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 3) transform을 이용해 가운데에 놓고 싶을 때 */
+/* 3번방법은 hover에 translate(-50%, -50%)이 추가로 있어야 한다. */
+
+.imgView{transition: 0.3s;} /* hover 속성을 가지고 있는 개체에 넣어야 함 */
+.imgView:hover{
+    transform:  scale(1.2) translate(-50%, -50%) ;
+}
+
+
+.imgView1{overflow:hidden;}
+.imgView1 > img{transition: 0.3s ;}
+.imgView1 > img:hover{
+    transform: scale(1.2);
+}
+
+
+/* .imgView1{overflow: hidden;}
+.imgView1> img{transition: 0.3s;}
+.imgView1:hover> img{transform: scale(1.2)} */
+
+
+.imgView2{}
+.imgView2>img{transition: 0.3s;}
+.imgView2>img:hover{
+    transform: translateY(-20px) rotate(5deg); 
+    box-shadow: -20px 10px 20px rgba(0, 0, 0, 0.5);}

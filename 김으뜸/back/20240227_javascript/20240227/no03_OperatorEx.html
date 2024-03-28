@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        document.write("기본개념<br>")
+        var incData = 100;
+        document.write("incData = " + incData + "<br>");
+        document.write("incData++ = " + incData++ + "<br>"); // 후위 연산자 첫호출시 자기자신은 계산X
+        document.write("incData++ = " + incData++ + "<br>"); // 후위 연산자 두번째 호출시부터 자기자신은 계산X
+        document.write("++incData = " + ++incData + "<br>"); // 전위 연산자 첫 호출시부터 자기자신 계산
+        document.write("++incData = " + ++incData + "<br><br><br>*******************<br><br><br>") ;
+
+    </script>
+    
+    <script>
+        document.write("pdf파일 예제<br>")
+        var incData = 1 ;
+        var decData = 5 ;
+        var r1 = r2 = 0 ;
+        document.write("기본값<br>incData = 1<br>decData = 5<br>r1 = r2 = 0<br>**********<br>")
+        document.write("15%3 = " + 15%3 + "<br>") ;
+        document.write("incData++ = " + incData++ + "<br>"); // 후위 증가이므로 원래 가진 값이 출력됨
+        document.write("후위연산자는 incData를 한번 더 호출해줘야 +가 반영 된 값이 출력된다.<br>incData= " +incData + "<br>")
+        document.write("전위 연산자는 바로 계산되어 출력된다.<br> ++incData = " + ++incData + "<br><br>"); // 전위 증가
+        document.write("decData-- = " + decData-- + "<br>"); // 후위 감소
+        document.write("후위 연산자는 decData를 한번 더 호출 해줘야 -가 반영 된 값이 출력된다.<br> decData = " + decData + "<br>"); // 후위 감소
+        document.write("전위 연산자는 바로 계산되어 출력된다.<br> --decData = " + --decData + "<br>"); // 전위 감소
+        document.write("********************<br>")
+        r2 = incData * decData;                              // 곱셈 연산
+        document.write("incData * decData = " + r2 + "<br>");
+
+
+    </script>
+
+
+</body>
+</html>

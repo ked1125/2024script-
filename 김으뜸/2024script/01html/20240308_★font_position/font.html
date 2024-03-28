@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- fonts.google.com에서 get font,  -->
+    <style>
+        body{ /*body에 적용시 기본 글꼴체로 사용 가능하다.*/
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-bold{
+    font-weight: 700;
+}
+p.thin{
+    font-weight: 100;
+}
+
+    </style>
+
+</head>
+<body>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, impedit.<br>
+    <p>
+        basic_400 Lorem ipsum dolor sit amet, <span class="font-bold">test</span> consectetur adipisicing elit. Inventore, consequuntur?
+    </p>
+
+    <p class="font-bold">
+        bold_700 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, autem.
+    </p>
+
+    <p class="thin">
+        thin_100 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, consequatur!
+    </p>
+
+    
+</body>
+</html>

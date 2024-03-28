@@ -1,0 +1,52 @@
+<!-- 모범답안! -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{height: 100%;}
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxWrap{
+            position:absolute;
+            width: 400px;
+            height: 400px;
+            background: red;
+            
+        }
+
+        .box{
+            position:absolute;
+            /* left: 100px;
+            top:100px; */
+            /* right:0;
+            bottom:0; */
+            top: 0px;
+            right:0px;
+            width: 100px;height: 100px;
+            background-color: skyblue;
+        }
+            
+
+        /* 부모가 position이 있어야함  / width등의 크기값이 있어야함*/
+        /* position은 absolute와 relative로 두가지가 있다  */
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

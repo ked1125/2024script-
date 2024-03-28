@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .vList{width: 300px;}
+
+        .vList > li{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    
+
+        <input type="text" value="" class="todo">
+        <button class="btn">오늘의 할일</button>
+
+        <ul class="vList">
+
+        </ul>
+        
+        <script>
+
+            // ✨변수파트
+            const todoElm = document.getElementsByClassName('todo')[0]
+            const btnElm = document.getElementsByClassName('btn')[0]
+            const vListElm = document.getElementsByClassName('vList')[0]
+            // => 코드 const vListElm = document.getElementsByClassName('vList')[0]에 대한 설명!!!
+            // id값이 아닌 class=""값은 중복으로 지정할 수 있기 때문에, 여러 값을 가지게 될 수 있으므로
+            // 문서 내에서 vList라는 class이름을 가진 태그들의 데이터값을 전부 수집하여 유사"배열!!"형태로 [a, b, c..] 이런식으로 만들어주는 용도라고 생각하면 된다
+            // 따라서 class값에서는 데이터를 모아 만든 유사배열형태에서, 어떤 데이터를 지정하여 사용할것인디 [index num를 기재해줘야한다!]
+
+            const viewList = ["한성용","홍길동","이순신"]; // viewList 배열 생성 및 선언
+
+
+
+    
+
+            // btnElm.addEventListener("click",function(){})
+            btnElm.addEventListener("click",function(){ //버튼클릭
+                // console.log(todoElm.value)
+                viewList.push(todoElm.value)    // viewList에 value create
+                todoElm.value = ''              // input value 초기화
+
+                let textList = '' // 문자초기값
+                for(let i=0;i<viewList.length;i++){
+                    // textList = textList + `<li>${viewList[i]}</li>`
+                    textList +=  `<li><div>${viewList[i]}</div> <div>삭제</div></li>`
+                }
+
+                vListElm.innerHTML = textList;
+                   
+
+            })
+
+            
+            
+        </script>
+
+        
+    
+</body>
+</html>

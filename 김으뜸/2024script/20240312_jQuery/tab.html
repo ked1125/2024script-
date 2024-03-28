@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul,
+      li {
+        list-style-type: none;
+      }
+      .tab {
+        display: flex;
+      }
+      .tab > li {
+        padding: 5px 20px;
+        background-color: #eee;
+      }
+      .tab li.active {
+        background-color: #333;
+        color: white;
+      }
+      .wrap div {
+        width: 300px;
+        border: 1px solid #000;
+        display: none;
+      }
+      .wrap div:nth-child(1) {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="tab">
+      <li class="active">tab1</li>
+      <li>tab2</li>
+      <li>tab3</li>
+      <li>tab4</li>
+    </ul>
+    <div class="wrap">
+      <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas
+        magnam illo, corporis quos neque aliquam sapiente ipsam cum odit?
+      </div>
+      <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas
+        magnam illo, corporis quos neque aliquam sapiente ipsam cum odit?
+      </div>
+      <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas
+        magnam illo, corporis quos neque aliquam sapiente ipsam cum odit?
+      </div>
+      <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas
+        magnam illo, corporis quos neque aliquam sapiente ipsam cum odit?
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(".tab > li").click(function () {
+        console.log($(this).index());
+        $(".tab li").removeClass("active");
+        $(this).addClass("active");
+
+        $(".wrap div").css("display", "none");
+        $(".wrap div").eq($(this).index()).css("display", "block"); // $(선택자).eq(index)~~
+      });
+    </script>
+  </body>
+</html>

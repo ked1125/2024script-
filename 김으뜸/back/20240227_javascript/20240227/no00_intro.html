@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 반응형 웹 구현을 위해서 width=device-width, initial-scale=1.0 사용 -->
+    <title>Document</title>
+    <script>
+        window.document.write("hello world!!");
+        // window.document.write("내용"); (js에선 ; 생략 가능, window도 생략 가능.)
+        // 행위를 취할 때 .이름(소괄호)의 형식
+        window.document.write(4*4);
+        // "4*4"나 '4*4'는 문자열취급, 4*4는 계산결과값이 출력됨
+        document.write('hello world!!'+(4+4)+"입니다.");
+        var num = 11;
+        // 대입연산자 =, num이라는 변수( 변하는 데이터 )에 11의 숫자를 대입한다.
+        num = num + 1;
+        // 윗줄에서 num에 11을 대입했으나, 그 값에 추가 1을 더해도 num은 변수이므로 12로 데이터 수정, 대입되어 저장
+        document.write('hello world!!' + " num = " +num +"입니다");
+        // 큰따옴표와 작은따옴표는 열고 닫을 때 한 세트로 통일해서 작성해줘야한다
+        console.log('안녕하세요');
+        // dev option창(크롬의 검사창) - console탭에서 출력된다.
+
+
+        // ★★★java에서의 System.out.println("내용입력"); = js 에서의document.write("내용입력");★★★
+
+    </script>
+
+    <script src="script.js"></script>
+    <!--  dev option창(크롬의 검사창) - console탭에서 출력된다.  -->
+    
+
+
+</head>
+<body>
+
+    <br>
+    <br>
+    <button type="button" onclick="window.alert('자바스크립트')">클릭</button>
+    <!-- 마우스로 클릭시 자바스크립트라는 경고창을 띄워줌. "자바스크립트"라고 입력할경우 에러가나고, '자바스크립트'라고 써줘야 함 ("" 한세트씩으로 묶기 때문.) -->
+    <!-- window. 은 생략가능 -->
+    <div>클릭</div>
+    <div><button>클릭</button></div>
+    <!-- <img src="태그가 가지고 있는 고유의 특성(속성)값" alt=""> -->
+    ==test==
+
+
+
+</body>
+</html>

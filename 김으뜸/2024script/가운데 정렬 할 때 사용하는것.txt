@@ -1,0 +1,27 @@
+*****가운데 정렬 할 때 사용하는것*****
+*block <- div tag가 해당됨
+m0 auto
+
+*position
+부모자에  por 설정 이후
+위치 지정하고자 하는 개체에 poa설정
+top right
+
+*flex이용
+df (display flex)
+jfc(justify content center)
+ali(align item center)
+
+
+★position 부연설명★
+    /* por(relative) __★부모자에게 por적용해줘야함★*/
+    /* left, top등의 좌표값은 반드시 position값이 있어야만 지정,적용 가능하다 */
+    /* position, relative 값은 처음 있었던 위치 기준으로 움직인당 */
+
+
+
+    /* poa(absolute) */
+    /* 부모자-바디 안에서 움직인다!!!★
+    부모자에 position-relative값을 넣어주지 않았을 경우, 무조건 바디안에서 절대좌표를 찍는다!!!★
+    부모자인 바디안에서 좌표값을 지정해주므로, 스크린크기 늘리고 줄이면 영향을 받아 right값 지정시 right기준 30이도록 
+    스크린 크기를 쫓아간다 */
