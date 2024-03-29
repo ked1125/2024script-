@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .slideImg {
+        /* background-color: skyblue; */
+        height: 400px;
+        overflow: hidden;
+      }
+      .slideImg img {
+        height: 150%;
+        display: block;
+        /* img태그는 인라인태그이므로 스카이블루 배경색이 이미지 하단에 살짝 삐져나오는데,
+        이걸 삭제해주기 위해서 img태그를 강제로 블록단위태그로 바꿔주기 위함 */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* object-fit: cover; */
+      }
+
+      .textWrap {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        /* background: pink; */
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .textWrap.right {
+        justify-content: end;
+        text-align: right;
+      }
+
+      .textBody {
+        background-color: #fff;
+        padding: 20px;
+      }
+      .wrap {
+        height: 400px;
+        /* overflow: hidden; */
+      }
+
+      @media screen and (max-width: 1200px) {
+        .textWrap {
+          width: 100%;
+          justify-content: center !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <div class="wrap">
+      <swiper-container class="slideWrap">
+        <swiper-slide class="slideImg bgimg01">
+          <img src="./images/img1.jpg" alt="" />
+          <div class="textWrap right">
+            <!--w1200-->
+            <div class="textBody">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, tempora!
+              </p>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg01">
+          <img src="./images/img2.jpg" alt="" />
+          <div class="textWrap">
+            <!--w1200-->
+            <div class="textBody">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, tempora!
+              </p>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg01">
+          <img src="./images/img3.jpg" alt="" />
+          <div class="textWrap">
+            <!--w1200-->
+            <div class="textBody">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, tempora!
+              </p>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg01">
+          <img src="./images/img4.jpg" alt="" />
+          <div class="textWrap">
+            <!--w1200-->
+            <div class="textBody">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, tempora!
+              </p>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg01">
+          <img src="./images/img5.jpg" alt="" />
+          <div class="textWrap">
+            <!--w1200-->
+            <div class="textBody">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, tempora!
+              </p>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="slideImg bgimg01">
+          <img src="./images/img6.jpg" alt="" />
+          <div class="textWrap">
+            <!--w1200-->
+            <div class="textBody">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, tempora!
+              </p>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div class="container" style="height: 400px; background-color: red"></div>
+  </body>
+</html>

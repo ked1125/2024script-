@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slideImg {
+        /* background: skyblue; */
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: yellow url("./images/img1.jpg") no-repeat;
+        /* background:url(".이부분은 이미지 경로값"); => 백그라운드 이미지로 설정, 이미지 사이즈 지정한 것에 따라 이미지가 패턴화 된다. */
+        /* 패턴화, 즉 반복되어 적용되는것을 피하기 위해 no-repeat 설정 해주고, 이미지를 센터에 지정해주기 위해 center입력해줘도 됨 */
+        /* background-color: yello;
+        background-image: url(./images/img1.jpg);
+        background-repeat: no-repeat; */
+        background-position: center center;
+        /* px 로 작성할 경우 각각 x축,y축에 이미지 좌표값 지정해주게되고, 화면사이즈 바꾸는 것에 따라 center찾아가도록 지정가능함. */
+        /* background-size: cover; */
+        background-size: 600px;
+      }
+      .slideImg img {
+        width: 100%;
+        display: block;
+        /* img태그는 인라인태그이므로 스카이블루 배경색이 이미지 하단에 살짝 삐져나오는데,
+        이걸 삭제해주기 위해서 img태그를 강제로 블록단위태그로 바꿔주기 위함 */
+      }
+
+      .slideImg.bgimg01 {
+        background-image: url(./images/img1.jpg);
+      }
+      .slideImg.bgimg02 {
+        background-image: url(./images/img2.jpg);
+      }
+      .slideImg.bgimg03 {
+        background-image: url(./images/img3.jpg);
+      }
+      .slideImg.bgimg04 {
+        background-image: url(./images/img4.jpg);
+      }
+      .slideImg.bgimg05 {
+        background-image: url(./images/img5.jpg);
+      }
+      .slideImg.bgimg06 {
+        background-image: url(./images/img6.jpg);
+      }
+      /* .slideWrap {
+        width: 300px;
+      } */
+      .wrap {
+        height: 400px;
+        overflow: hidden;
+      }
+
+      .header {
+        height: 500px;
+        display: flex;
+        /* flex-direction: column; */
+        /* 텍스트들 세로 방향 정렬하고싶을경우 */
+        justify-content: center;
+        align-items: center;
+        /* 부모자에 높이값이 있는 경우, h1태그를 중앙정렬 하기 위해 사용함 */
+      }
+
+      .header h1 {
+        background-color: #ddd;
+        /* text-align: center; */
+        /* h1이 블록단위니까헤더에 높이값이 없을 땐이렇게 사용해도 됨 */
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <div class="header">
+      <h1>test</h1>
+      <h1>|</h1>
+      <h1>test</h1>
+      <h1>|</h1>
+      <h1>test</h1>
+    </div>
+    <div class="wrap">
+      <swiper-container class="slideWrap">
+        <swiper-slide class="slideImg bgimg01">test1 </swiper-slide>
+        <swiper-slide class="slideImg bgimg02">test1 </swiper-slide>
+        <swiper-slide class="slideImg bgimg03">test1 </swiper-slide>
+        <swiper-slide class="slideImg bgimg04">test1 </swiper-slide>
+        <swiper-slide class="slideImg bgimg05">test1 </swiper-slide>
+        <swiper-slide class="slideImg bgimg06">test1 </swiper-slide>
+      </swiper-container>
+    </div>
+
+    <div class="container" style="height: 400px; background-color: red"></div>
+  </body>
+</html>
